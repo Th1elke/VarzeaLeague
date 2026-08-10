@@ -1,0 +1,125 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum FormatoCampeonato {
+  PONTOS_CORRIDOS
+  MATA_MATA
+  GRUPOS
+}
+
+enum StatusCampeonato {
+  NAO_INICIADO
+  EM_ANDAMENTO
+  ENCERRADO
+}
+
+enum StatusPartida {
+  AGENDADA
+  ENCERRADA
+}
+
+model Usuario {
+  id         Int      @id @default(autoincrement())
+  email      String   @unique
+  senha_hash String
+  criado_em  DateTime @default(now())
+
+  @@map("usuarios")
+}
+
+model Time {
+  id         Int      @id @default(autoincrement())
+  nome       String
+  sigla      String
+  cidade     String
+  escudo_url String?
+  criado_em  DateTime @default(now())
+
+  jogadores       Jogador[]
+  participacoes   Participacao[]
+  partidasCasa    Partida[]      @relation("PartidaTimeCasa")
+  partidasFora    Partida[]      @relation("PartidaTimeVisitante")
+
+  @@map("times")
+}
+
+model Jogador {
+  id             Int     @id @default(autoincrement())
+  time_id        Int
+  nome           String
+  posicao        String
+  numero_camisa  Int
+
+  time        Time                         @relation(fields: [time_id], references: [id], onDelete: Cascade)
+  estatisticas EstatisticaJogadorPartida[]
+
+  @@map("jogadores")
+}
+
+model Campeonato {
+  id        Int               @id @default(autoincrement())
+  nome      String
+  temporada String
+  formato   FormatoCampeonato @default(PONTOS_CORRIDOS)
+  status    StatusCampeonato  @default(NAO_INICIADO)
+  criado_em DateTime          @default(now())
+
+  participacoes Participacao[]
+  partidas      Partida[]
+
+  @@map("campeonatos")
+}
+
+model Participacao {
+  id            Int @id @default(autoincrement())
+  campeonato_id Int
+  time_id       Int
+
+  campeonato Campeonato @relation(fields: [campeonato_id], references: [id], onDelete: Cascade)
+  time       Time       @relation(fields: [time_id], references: [id], onDelete: Cascade)
+
+  @@unique([campeonato_id, time_id])
+  @@map("participacoes")
+}
+
+model Partida {
+  id                 Int           @id @default(autoincrement())
+  campeonato_id      Int
+  time_casa_id       Int
+  time_visitante_id  Int
+  gols_casa          Int?
+  gols_visitante     Int?
+  data               DateTime
+  rodada             Int
+  status             StatusPartida @default(AGENDADA)
+
+  campeonato    Campeonato                  @relation(fields: [campeonato_id], references: [id], onDelete: Cascade)
+  timeCasa      Time                        @relation("PartidaTimeCasa", fields: [time_casa_id], references: [id])
+  timeVisitante Time                        @relation("PartidaTimeVisitante", fields: [time_visitante_id], references: [id])
+  estatisticas  EstatisticaJogadorPartida[]
+
+  @@map("partidas")
+}
+
+model EstatisticaJogadorPartida {
+  id                 Int @id @default(autoincrement())
+  partida_id         Int
+  jogador_id         Int
+  gols               Int @default(0)
+  cartoes_amarelos   Int @default(0)
+  cartoes_vermelhos  Int @default(0)
+  assistencias       Int @default(0)
+
+  partida Partida @relation(fields: [partida_id], references: [id], onDelete: Cascade)
+  jogador Jogador @relation(fields: [jogador_id], references: [id], onDelete: Cascade)
+
+  @@unique([partida_id, jogador_id])
+  @@map("estatisticas_jogador_partida")
+}
