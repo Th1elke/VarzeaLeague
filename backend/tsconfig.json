@@ -17,6 +17,6 @@
     "noUnusedParameters": true,
     "noImplicitOverride": true
   },
-  "include": ["src", "prisma", "tests"],
+  "include": ["src", "prisma", "tests", "api"],
   "exclude": ["node_modules", "dist"]
 }

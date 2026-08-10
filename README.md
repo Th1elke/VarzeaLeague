@@ -16,8 +16,11 @@ backend/     API REST (Fastify + Prisma + PostgreSQL) — ver backend/README.md
 frontend/    Nuxt 3 + Tailwind, consumindo a API — scaffold mínimo por enquanto
 ```
 
-Cada pasta tem seu próprio `package.json` e é deployável de forma independente
-(backend no Railway/Render, frontend na Vercel).
+Cada pasta tem seu próprio `package.json` e é deployada como um projeto
+Vercel separado (dois imports do mesmo repositório, cada um com seu próprio
+"Root Directory"): o backend roda como função serverless
+(`backend/api/index.ts`), o frontend como app Nuxt normal. Banco de dados via
+Neon. Detalhes de deploy em [`backend/README.md`](./backend/README.md#deploy-vercel).
 
 ## Começando
 

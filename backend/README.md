@@ -84,6 +84,37 @@ rodar (`tests/integration/helpers.ts`). Recomenda-se usar um banco de
 desenvolvimento/teste separado do de produção. Os testes unitários
 (`tests/unit`) cobrem `classificacao.service.ts` de forma isolada, sem banco.
 
+## Deploy (Vercel)
+
+O backend roda na Vercel como **função serverless**, não como servidor
+persistente: `api/index.ts` reaproveita a mesma instância do Fastify (e do
+Prisma Client) entre invocações "quentes" e delega cada request pra dentro
+dela via `app.server.emit("request", req, res)`. O `vercel.json` reescreve
+todas as rotas (`/`, `/times`, `/campeonatos/:id`, `/docs`, etc.) para essa
+função, então o roteamento em si continua sendo feito pelo Fastify
+normalmente — só a forma como a requisição chega até ele que muda.
+
+Passos:
+
+1. [vercel.com](https://vercel.com) → **Add New → Project** → importar o
+   repositório `VarzeaLeague`.
+2. Em **Root Directory**, selecionar `backend` (é monorepo — sem isso a
+   Vercel não acha o projeto).
+3. Em **Environment Variables**, adicionar `DATABASE_URL`, `DIRECT_URL` e
+   `JWT_SECRET` (os mesmos valores do `.env` local).
+4. Deploy. O script `vercel-build` (`prisma generate && prisma migrate
+   deploy`) roda automaticamente antes do build da função, aplicando
+   qualquer migration pendente.
+5. A URL pública gerada (`https://<projeto>.vercel.app`) é o que entra como
+   `NUXT_PUBLIC_API_BASE` no projeto do frontend na Vercel.
+
+Trade-off consciente: como é serverless, cada container novo ("cold start")
+recria a instância do Fastify e reconecta o Prisma — por isso o uso do Neon
+(desenhado pra conexões serverless, com pooler via `pgbouncer`) em vez de um
+Postgres tradicional. O `npm start` local (`prisma migrate deploy && node
+dist/server.js`) continua funcionando como servidor persistente comum, caso o
+projeto precise rodar em Railway/Render/VPS no futuro.
+
 ## Autenticação
 
 Simplificada para fins de portfólio: cadastro por email + senha, sem
@@ -96,6 +127,8 @@ no MVP.
 ## Arquitetura de pastas
 
 ```
+api/
+  index.ts             entrypoint da função serverless (deploy na Vercel)
 src/
   modules/
     auth/            registro e login
