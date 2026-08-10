@@ -1,0 +1,52 @@
+﻿
+> dev
+> nuxt dev
+
+|
+•  Nuxt 4.5.2 (with Nitro 2.13.4, Vite 8.2.1 and Vue 3.5.41)
+[get-port] Unable to find an available port (tried 3000 on host "localhost"). Using alternative port 3001.
+
+  ➜ Local:    http://localhost:3001/
+  ➜ Network:  use --host to expose
+
+[nuxt:tailwindcss] i Using default Tailwind CSS file
+  ➜ DevTools: press Shift + Alt + D in the browser (v3.4.1)
+
+i Re-optimizing dependencies because vite config has changed
+√ Vite client built in 90ms
+√ Vite server built in 23ms
+[nitro] √ Nuxt Nitro server built in 877ms
+i Vite server warmed up in 17ms
+i Vite client warmed up in 64ms
+i dependencies optimized: @vue/devtools-core, @vue/devtools-kit
+i hmr update /pages/index.vue, /@fs/C:/Users/Gustavo/Documents/GitHub/VarzeaLeague/frontend/node_modules/tailwindcss/tailwind.css?direct, /@fs/C:/Users/Gustavo/Documents/GitHub/VarzeaLeague/frontend/node_modules/tailwindcss/tailwind.css, /@id/virtual:nuxt:.nuxt%2Froutes.mjs
+node.exe : 
+No linha:1 caractere:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+ WARN  [console.warn] [VUE_ROUTER_R0004] No match found for location with path "/campeonatos/5"
+├▶ fix: Add a route matching this path or check for typos in the location.
+╰▶ see: https://router.vuejs.org/guide/essentials/dynamic-matching.html#Catch-all-404-Not-found-Route
+
+
+ WARN  [console.warn] [VUE_ROUTER_R0004] No match found for location with path "/campeonatos/5"
+├▶ fix: Add a route matching this path or check for typos in the location.
+╰▶ see: https://router.vuejs.org/guide/essentials/dynamic-matching.html#Catch-all-404-Not-found-Route (x2)
+
+
+ WARN  [console.warn] [VUE_ROUTER_R0004] No match found for location with path "/campeonatos/4"
+├▶ fix: Add a route matching this path or check for typos in the location.
+╰▶ see: https://router.vuejs.org/guide/essentials/dynamic-matching.html#Catch-all-404-Not-found-Route
+
+
+ WARN  [console.warn] [VUE_ROUTER_R0004] No match found for location with path "/campeonatos/4"
+├▶ fix: Add a route matching this path or check for typos in the location.
+╰▶ see: https://router.vuejs.org/guide/essentials/dynamic-matching.html#Catch-all-404-Not-found-Route (x2)
+
+i hmr update /@id/virtual:nuxt:.nuxt%2Froutes.mjs
+√ Vite server hmr 21 files in 0.586ms
+√ Vite server hmr 16 files in 0.64ms
+√ Vite server hmr 16 files in 1.102ms

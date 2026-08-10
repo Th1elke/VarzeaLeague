@@ -1,6 +1,7 @@
 import Fastify from "fastify";
 import { serializerCompiler, validatorCompiler } from "fastify-type-provider-zod";
 import { env } from "./config/env.js";
+import { corsPlugin } from "./plugins/cors.js";
 import { errorHandlerPlugin } from "./plugins/error-handler.js";
 import { jwtPlugin } from "./plugins/jwt.js";
 import { prismaPlugin } from "./plugins/prisma.js";
@@ -23,6 +24,7 @@ export function buildApp() {
   app.setSerializerCompiler(serializerCompiler);
 
   app.register(errorHandlerPlugin);
+  app.register(corsPlugin);
   app.register(prismaPlugin);
   app.register(jwtPlugin);
   app.register(swaggerPlugin);

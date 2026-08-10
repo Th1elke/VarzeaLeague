@@ -1,0 +1,16 @@
+﻿node.exe : npm error code ENOENT
+No linha:1 caractere:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (npm error code ENOENT:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+npm error syscall open
+npm error path C:\Users\Gustavo\Documents\GitHub\VarzeaLeague\package.json
+npm error errno -4058
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open 
+'C:\Users\Gustavo\Documents\GitHub\VarzeaLeague\package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: 
+C:\Users\Gustavo\AppData\Local\npm-cache\_logs\2026-08-10T17_22_39_472Z-debug-0.log

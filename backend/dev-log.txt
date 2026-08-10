@@ -1,0 +1,64 @@
+﻿
+> varzealeague-backend@0.1.0 dev
+> tsx watch src/server.ts
+
+{"level":30,"time":1786383071258,"pid":13032,"hostname":"DESKTOP-SSHANE3","msg":"Server listening at http://127.0.0.1:3333"}
+{"level":30,"time":1786383071258,"pid":13032,"hostname":"DESKTOP-SSHANE3","msg":"Server listening at http://169.254.83.107:3333"}
+{"level":30,"time":1786383071258,"pid":13032,"hostname":"DESKTOP-SSHANE3","msg":"Server listening at http://192.168.56.1:3333"}
+{"level":30,"time":1786383071258,"pid":13032,"hostname":"DESKTOP-SSHANE3","msg":"Server listening at http://10.200.0.103:3333"}
+{"level":30,"time":1786383071259,"pid":13032,"hostname":"DESKTOP-SSHANE3","msg":"Servidor rodando na porta 3333"}
+{"level":30,"time":1786383071259,"pid":13032,"hostname":"DESKTOP-SSHANE3","msg":"Documentação disponível em http://localhost:3333/docs"}
+{"level":30,"time":1786383092714,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-1","req":{"method":"GET","url":"/campeonatos","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":64574},"msg":"incoming request"}
+{"level":30,"time":1786383093343,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-1","res":{"statusCode":200},"responseTime":628.2219999999979,"msg":"request completed"}
+{"level":30,"time":1786383101655,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-2","req":{"method":"GET","url":"/campeonatos/4","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":57739},"msg":"incoming request"}
+{"level":30,"time":1786383101659,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-3","req":{"method":"GET","url":"/campeonatos/4/classificacao","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":57740},"msg":"incoming request"}
+{"level":30,"time":1786383101662,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-4","req":{"method":"GET","url":"/campeonatos/4/partidas","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":57741},"msg":"incoming request"}
+{"level":30,"time":1786383101663,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-5","req":{"method":"GET","url":"/campeonatos/4/artilharia","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":57742},"msg":"incoming request"}
+{"level":30,"time":1786383102855,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-2","res":{"statusCode":200},"responseTime":1199.2620999999963,"msg":"request completed"}
+{"level":30,"time":1786383103865,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-5","res":{"statusCode":200},"responseTime":2201.910300000003,"msg":"request completed"}
+{"level":30,"time":1786383103868,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-4","res":{"statusCode":200},"responseTime":2206.5430000000015,"msg":"request completed"}
+{"level":30,"time":1786383104160,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-3","res":{"statusCode":200},"responseTime":2501.0396999999975,"msg":"request completed"}
+{"level":30,"time":1786383110427,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-6","req":{"method":"GET","url":"/campeonatos","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":64521},"msg":"incoming request"}
+{"level":30,"time":1786383110718,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-6","res":{"statusCode":200},"responseTime":290.93790000000445,"msg":"request completed"}
+{"level":30,"time":1786383111813,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-7","req":{"method":"GET","url":"/campeonatos/4","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":64521},"msg":"incoming request"}
+{"level":30,"time":1786383111815,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-8","req":{"method":"GET","url":"/campeonatos/4/classificacao","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":53774},"msg":"incoming request"}
+{"level":30,"time":1786383112130,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-9","req":{"method":"GET","url":"/campeonatos/4/partidas","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":56917},"msg":"incoming request"}
+{"level":30,"time":1786383112132,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-a","req":{"method":"GET","url":"/campeonatos/4/artilharia","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":63831},"msg":"incoming request"}
+{"level":30,"time":1786383112681,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-7","res":{"statusCode":200},"responseTime":867.8248999999996,"msg":"request completed"}
+{"level":30,"time":1786383112682,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-8","res":{"statusCode":200},"responseTime":866.7007999999987,"msg":"request completed"}
+{"level":30,"time":1786383113041,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-9","res":{"statusCode":200},"responseTime":910.1682999999975,"msg":"request completed"}
+{"level":30,"time":1786383114319,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-a","res":{"statusCode":200},"responseTime":2186.5711999999985,"msg":"request completed"}
+{"level":30,"time":1786383179350,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-b","req":{"method":"GET","url":"/health","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":53262},"msg":"incoming request"}
+{"level":30,"time":1786383179351,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-b","res":{"statusCode":200},"responseTime":0.6126000000076601,"msg":"request completed"}
+{"level":30,"time":1786383179372,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-c","req":{"method":"GET","url":"/campeonatos","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":53262},"msg":"incoming request"}
+{"level":30,"time":1786383179967,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-c","res":{"statusCode":200},"responseTime":595.1000000000058,"msg":"request completed"}
+{"level":30,"time":1786383179987,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-d","req":{"method":"GET","url":"/docs","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":53262},"msg":"incoming request"}
+{"level":30,"time":1786383179988,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-d","res":{"statusCode":200},"responseTime":0.8839000000007218,"msg":"request completed"}
+{"level":30,"time":1786383180007,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-e","req":{"method":"GET","url":"/campeonatos/5","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":53268},"msg":"incoming request"}
+{"level":30,"time":1786383180007,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-f","req":{"method":"GET","url":"/campeonatos/5/partidas","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":53269},"msg":"incoming request"}
+{"level":30,"time":1786383180008,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-g","req":{"method":"GET","url":"/campeonatos/5/classificacao","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":53270},"msg":"incoming request"}
+{"level":30,"time":1786383180008,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-h","req":{"method":"GET","url":"/campeonatos/5/artilharia","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":53271},"msg":"incoming request"}
+{"level":30,"time":1786383180876,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-h","res":{"statusCode":200},"responseTime":868.6434000000008,"msg":"request completed"}
+{"level":30,"time":1786383181082,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-g","res":{"statusCode":200},"responseTime":1074.8594000000012,"msg":"request completed"}
+{"level":30,"time":1786383181086,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-f","res":{"statusCode":200},"responseTime":1078.5035999999964,"msg":"request completed"}
+{"level":30,"time":1786383181275,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-e","res":{"statusCode":200},"responseTime":1267.8025999999954,"msg":"request completed"}
+{"level":30,"time":1786383345915,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-i","req":{"method":"GET","url":"/campeonatos","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":49984},"msg":"incoming request"}
+{"level":30,"time":1786383346225,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-i","res":{"statusCode":200},"responseTime":310.5374000000302,"msg":"request completed"}
+{"level":30,"time":1786383548355,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-j","req":{"method":"GET","url":"/campeonatos/4","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":49512},"msg":"incoming request"}
+{"level":30,"time":1786383548357,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-k","req":{"method":"GET","url":"/campeonatos/4/classificacao","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":49513},"msg":"incoming request"}
+{"level":30,"time":1786383548358,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-l","req":{"method":"GET","url":"/campeonatos/4/partidas","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":49514},"msg":"incoming request"}
+{"level":30,"time":1786383548359,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-m","req":{"method":"GET","url":"/campeonatos/4/artilharia","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":49515},"msg":"incoming request"}
+{"level":30,"time":1786383550184,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-j","res":{"statusCode":404},"responseTime":1828.1551999999792,"msg":"request completed"}
+{"level":30,"time":1786383550185,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-l","res":{"statusCode":404},"responseTime":1827.0546000000322,"msg":"request completed"}
+{"level":30,"time":1786383550186,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-m","res":{"statusCode":404},"responseTime":1826.5447999999742,"msg":"request completed"}
+{"level":30,"time":1786383550187,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-k","res":{"statusCode":404},"responseTime":1829.657499999972,"msg":"request completed"}
+{"level":30,"time":1786383553391,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-n","req":{"method":"GET","url":"/campeonatos","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":51821},"msg":"incoming request"}
+{"level":30,"time":1786383553764,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-n","res":{"statusCode":200},"responseTime":372.1989000000176,"msg":"request completed"}
+{"level":30,"time":1786383554965,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-o","req":{"method":"GET","url":"/campeonatos/6","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":51821},"msg":"incoming request"}
+{"level":30,"time":1786383554970,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-p","req":{"method":"GET","url":"/campeonatos/6/classificacao","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":58878},"msg":"incoming request"}
+{"level":30,"time":1786383555280,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-q","req":{"method":"GET","url":"/campeonatos/6/partidas","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":64830},"msg":"incoming request"}
+{"level":30,"time":1786383555281,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-r","req":{"method":"GET","url":"/campeonatos/6/artilharia","host":"localhost:3333","remoteAddress":"127.0.0.1","remotePort":57665},"msg":"incoming request"}
+{"level":30,"time":1786383556018,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-p","res":{"statusCode":200},"responseTime":1047.7992000000086,"msg":"request completed"}
+{"level":30,"time":1786383556019,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-q","res":{"statusCode":200},"responseTime":738.9473999999464,"msg":"request completed"}
+{"level":30,"time":1786383556321,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-o","res":{"statusCode":200},"responseTime":1355.6902000000118,"msg":"request completed"}
+{"level":30,"time":1786383557431,"pid":13032,"hostname":"DESKTOP-SSHANE3","reqId":"req-r","res":{"statusCode":200},"responseTime":2149.978000000003,"msg":"request completed"}

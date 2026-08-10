@@ -29,15 +29,16 @@ const { data: campeonatos, status, error } = await useFetch<Campeonato[]>('/camp
     </p>
 
     <ul v-else class="space-y-3">
-      <li
-        v-for="campeonato in campeonatos"
-        :key="campeonato.id"
-        class="rounded-lg border border-slate-800 bg-slate-900 px-4 py-3"
-      >
-        <p class="font-medium">{{ campeonato.nome }}</p>
-        <p class="text-sm text-slate-400">
-          Temporada {{ campeonato.temporada }} · {{ campeonato.status }}
-        </p>
+      <li v-for="campeonato in campeonatos" :key="campeonato.id">
+        <NuxtLink
+          :to="`/campeonatos/${campeonato.id}`"
+          class="block rounded-lg border border-slate-800 bg-slate-900 px-4 py-3 transition-colors hover:border-slate-600 hover:bg-slate-800"
+        >
+          <p class="font-medium">{{ campeonato.nome }}</p>
+          <p class="text-sm text-slate-400">
+            Temporada {{ campeonato.temporada }} · {{ campeonato.status }}
+          </p>
+        </NuxtLink>
       </li>
     </ul>
   </main>
